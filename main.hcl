@@ -8,6 +8,7 @@ resource "lab" "container_terminal" {
     }
   }
 
+
   layout = resource.layout.two_column
 
   content {
