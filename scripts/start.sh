@@ -1,4 +1,4 @@
 #!/bin/bash
-touch test
+touch /root/test
 echo "Starting the application..."
-echo "Application started successfully!" >> test
+echo "Application started successfully!" >> /root/test
