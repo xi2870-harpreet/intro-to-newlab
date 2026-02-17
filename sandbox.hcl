@@ -10,4 +10,7 @@ resource "container" "ubuntu" {
   network {
     id = resource.network.main.meta.id
   }
+
+ 
+
 }
