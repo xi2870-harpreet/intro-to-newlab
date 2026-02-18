@@ -4,7 +4,7 @@ resource "network" "main" {
 
 resource "container" "ubuntu" {
   image {
-    name = "ubuntu"
+    name = "ubuntu:24.04"
   }
 
   network {
