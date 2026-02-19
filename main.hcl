@@ -28,8 +28,6 @@ resource "exec" "environment_setup" {
 
   script = <<-EOF
 #!/bin/bash
-set -euo pipefail   # Recommended: exit on error
-
 mkdir -p /home/user/workshop
 echo "Welcome to the Container Terminal lab!" > /home/user/workshop/README.md
 echo "Container ID: $(hostname)" >> /home/user/workshop/README.md
