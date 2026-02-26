@@ -14,6 +14,9 @@ resource "lab" "container_terminal" {
       enabled = true
       timeout = "15m"
     }
+   controls {
+    show_stop=false
+   } 
   }
 
   layout = resource.layout.two_column
