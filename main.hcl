@@ -11,7 +11,7 @@ resource "lab" "container_terminal" {
       show_timer = true
     }
     idle {
-     # enabled = false
+      
       timeout = "15m"
     }
   }
