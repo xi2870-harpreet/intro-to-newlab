@@ -2,10 +2,17 @@
 resource "lab" "container_terminal" {
   title       = "Container Terminal"
   description = "This is an example lab with a single container sandbox and a terminal tab."
+  tags        = ["kubernetes", "advanced", "devops"]
 
   settings {
+    theme = "modern-dark"
+    timelimit {
+      duration = "60m"
+      show_timer = true
+    }
     idle {
-      enabled = false
+     # enabled = false
+      timeout = "15m"
     }
   }
 
