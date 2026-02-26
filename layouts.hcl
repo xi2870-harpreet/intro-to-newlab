@@ -9,7 +9,15 @@ resource "layout" "two_column" {
   }
 
   column {
-    width = 33
+    width = 60
     instructions {}
   }
+    column {
+    width = "30"
+
+    tab "docs" {
+      target = resource.external_website.kubernetes_docs
+      title  = "K8s Docs"
+    }
+    }
 }
