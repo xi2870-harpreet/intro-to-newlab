@@ -9,7 +9,7 @@ resource "layout" "two_column" {
   }
   column {
     tab "terminal2" {
-      target = resource.terminal.shell
+      target = resource.terminal.shell2
     }
     width = "33"
     instructions {
