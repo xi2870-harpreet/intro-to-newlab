@@ -1,5 +1,6 @@
 # Define the lab metadata and structure
 resource "lab" "container_terminal" {
+  
   title       = "Container Terminal"
   description = "This is an example lab with a single container sandbox and a terminal tab."
   tags        = ["kubernetes", "advanced", "devops"]
@@ -24,6 +25,7 @@ resource "lab" "container_terminal" {
   content {
     chapter "introduction" {
       title = "Introduction"
+      
       page "first" {
         title     = "First"
         reference = resource.page.first
