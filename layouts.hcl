@@ -16,7 +16,7 @@ resource "layout" "two_column" {
     }
   }
   column {
-    width = 60
+    width = 50
     instructions {}
   }
     column {
