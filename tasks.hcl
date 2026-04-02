@@ -15,7 +15,7 @@ resource "task" "test" {
     failure_exit_codes = [1, 2]
     parallel_exec {
       condition = true
-      check = false
+      check = true
       solve = false
       setup = false
       cleanup = false
