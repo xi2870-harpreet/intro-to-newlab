@@ -38,20 +38,7 @@ resource "lab" "container_terminal" {
 resource "exec" "environment_setup" {
   target = resource.container.ubuntu
 
-  script = <<-EOF
-#!/bin/bash
-mkdir -p /home/user/workshop
-echo "Welcome to the Container Terminal lab!" > /home/user/workshop/README.md
-echo "Container ID: $(hostname)" >> /home/user/workshop/README.md
-
-apt-get update -qq
-apt-get install -y tree
-
-touch /root/secret.txt
-echo "This is a secret file - do not delete!" > /root/secret.txt
-
-echo "Setup complete"   # For log visibility
-EOF
+  script = file("scripts/environment_setup.sh")
 
   timeout           = "180s"
   working_directory = "/root"
