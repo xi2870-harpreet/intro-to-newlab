@@ -1,30 +1,48 @@
 resource "layout" "two_column" {
+
+  # Column 1 - Terminal 1
   column {
+    width = "25"
+
     tab "terminal" {
       target = resource.terminal.shell
+      title  = "Terminal 1"
     }
-    width = "33"
-    instructions {
-    }
-  }
-  column {
-    tab "terminal2" {
-      target = resource.terminal.shell2
-    }
-    width = "33"
-    instructions {
-    }
-  }
-  column {
-    width = 50
+
     instructions {}
   }
-    column {
-    width = "30"
+
+  # Column 2 - Terminal 2
+  column {
+    width = "25"
+
+    tab "terminal2" {
+      target = resource.terminal.shell2
+      title  = "Terminal 2"
+    }
+
+    instructions {}
+  }
+
+  # Column 3 - Instructions
+  column {
+    width = "25"
+
+    instructions {}
+  }
+
+  # Column 4 - Docs + NGINX
+  column {
+    width = "25"
 
     tab "docs" {
       target = resource.external_website.kubernetes_docs
       title  = "K8s Docs"
     }
+
+    tab "nginx" {
+      target = resource.container.ubuntu
+      title  = "NGINX (use terminal or service URL)"
     }
+  }
 }

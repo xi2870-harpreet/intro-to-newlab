@@ -9,12 +9,12 @@ resource "container" "ubuntu" {
 
   privileged = true
 
-   # ← Added to connect container to the network
-
   network {
     id = resource.network.main.meta.id
   }
 
- 
-
+  port {
+    local = "80"
+    host  = "80"
+  }
 }
