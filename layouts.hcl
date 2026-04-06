@@ -43,6 +43,7 @@ resource "layout" "two_column" {
     tab "nginx" {
       target = resource.service.nginx
       title  = "NGINX (use terminal or service URL)"
+    
     }
   }
 }

@@ -14,4 +14,5 @@ resource "terminal" "shell2" {
 
 resource "external_website" "kubernetes_docs" {
   url = "https://kubernetes.io/docs/"
+  open_in_new_window = true
 }
