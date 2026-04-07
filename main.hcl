@@ -28,7 +28,7 @@ resource "lab" "container_terminal" {
       
       page "first" {
         title     = "First"
-        reference = resource.page.first
+        reference = resource.page.first_challenge
       }
     }
   }
