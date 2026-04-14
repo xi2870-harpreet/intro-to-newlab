@@ -3,6 +3,6 @@ resource "page" "first_challenge" {
   file  = "instructions/page.md"
 
   activities = {
-    test = resource.task.test
+    "test" = resource.task.test
   }
 }
