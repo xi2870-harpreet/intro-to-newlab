@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+#set -e
 
 mkdir -p /home/user/workshop
 echo "Welcome to the Container Terminal lab!" > /home/user/workshop/README.md
