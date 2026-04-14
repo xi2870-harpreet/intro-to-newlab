@@ -10,7 +10,7 @@ resource "task" "test" {
 
     success_exit_codes = [0]
   }
-
+      
   condition "nginx_running" {
     description = "Check if NGINX container is running"
     config {

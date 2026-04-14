@@ -36,14 +36,5 @@ resource "lab" "container_terminal" {
 
 # Define the exec resource at top level — runs your setup script in the container during initialization
 
-resource "exec" "setup_environment" {
-  target = resource.container.ubuntu
-  script = "scripts/environment_setup.sh"
-  timeout           = "240s"
-  working_directory = "/root"
-  environment = {
-    "PATH" = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-  }
-}
 
 
