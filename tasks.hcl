@@ -14,11 +14,11 @@ resource "task" "test" {
   condition "nginx_running" {
     description = "Check if NGINX container is running"
     config {
-      timeout= "120s"
+      timeout = "120s"
     }
 
     check {
-      script = "scripts/check_nginx.sh"
+      script          = "scripts/check_nginx.sh"
       failure_message = "NGINX is not running. Please ensure the container is up and NGINX is installed and running inside it."
     }
 
@@ -27,13 +27,13 @@ resource "task" "test" {
   condition "nginx_accessible" {
     description = "Check if NGINX is accessible"
     config {
-      timeout= "120s"
+      timeout = "120s"
     }
     check {
-      script = "scripts/check_nginx_access.sh"
+      script          = "scripts/check_nginx_access.sh"
       failure_message = "NGINX is not accessible. Please ensure NGINX is running and properly configured to serve content on port 80."
     }
 
-    
+
   }
 }
