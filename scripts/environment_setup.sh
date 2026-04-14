@@ -19,7 +19,8 @@ apt-get update -y
 apt-get install -y docker.io
 
 echo "Starting Docker..."
-dockerd > /var/log/docker.log 2>&1 &
+dockerd --storage-driver=vfs > /var/log/docker.log 2>&1 &
+sleep 5
 
 # Wait for Docker to be ready
 for i in {1..10}; do
