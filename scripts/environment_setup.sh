@@ -6,7 +6,7 @@ echo "Welcome to the Container Terminal lab!" > /home/user/workshop/README.md
 echo "Container ID: $(hostname)" >> /home/user/workshop/README.md
 
 apt-get update -y
-apt-get install -y tree curl
+apt-get install -y tree curl vim less
 
 touch /root/secret.txt
 echo "This is a secret file - do not delete!" > /root/secret.txt
