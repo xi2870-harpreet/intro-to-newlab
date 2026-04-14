@@ -38,7 +38,7 @@ resource "lab" "container_terminal" {
 
 resource "exec" "setup_environment" {
   target = resource.container.ubuntu
-  script = "scripts/exec/setup_environment/environment_setup.sh"
+  script = file("scripts/environment_setup.sh")
   timeout           = "240s"
   working_directory = "/root"
   environment = {
