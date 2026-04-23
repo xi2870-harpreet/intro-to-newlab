@@ -5,7 +5,7 @@ resource "task" "test" {
   config {
     target            = resource.container.ubuntu
     user              = "root"
-    working_directory = "/home/user"
+    working_directory = "/root"
     timeout           = "30s"
 
     success_exit_codes = [0]
