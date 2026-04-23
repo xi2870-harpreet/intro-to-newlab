@@ -8,12 +8,12 @@ resource "lab" "container_terminal" {
   settings {
     theme = "modern-dark"
     timelimit {
-      duration   = "60m"
+      duration   = "180m"
       show_timer = true
     }
     idle {
       enabled = true
-      timeout = "15m"
+      timeout = "30m"
     }
     controls {
       show_stop = false

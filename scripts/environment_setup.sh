@@ -29,6 +29,6 @@ for i in {1..10}; do
 done
 
 echo "Running NGINX container..."
-docker run -d -p 80:80 --name nginx nginx
+docker run -d -p 8080:80 --name nginx nginx
 
 echo "Setup complete"
