@@ -1,6 +1,6 @@
 resource "service" "nginx" {
   target = resource.container.ubuntu
-  port   = 8080
+  port   = 80
   scheme = "http"
   path   = "/"
 }
