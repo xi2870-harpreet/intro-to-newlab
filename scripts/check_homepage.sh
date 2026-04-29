@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "hello world"
 EXPECTED_MESSAGE="Hello from my web server!"
 NGINX_HTML="/usr/share/nginx/html/index.html"
 
