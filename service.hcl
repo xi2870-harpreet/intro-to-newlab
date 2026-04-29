@@ -4,3 +4,9 @@ resource "service" "nginx" {
   scheme = "http"
   path   = "/"
 }
+# Service tab - exposes the nginx web server to users
+resource "service" "webserver" {
+  target = resource.container.webserver
+  port   = 80
+  scheme = "http"
+}

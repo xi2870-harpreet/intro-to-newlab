@@ -5,14 +5,24 @@ resource "terminal" "shell" {
   working_directory = "/root"
 }
 
+/*
 resource "terminal" "shell2" {
   target = resource.container.ubuntu
 
   shell             = "/bin/bash"
   working_directory = "/root"
 }
+*/
 
 resource "external_website" "kubernetes_docs" {
   url                = "https://kubernetes.io/docs/"
   open_in_new_window = true
+}
+
+
+
+# Terminal tab - provides command-line access
+resource "terminal" "shell2" {
+  target = resource.container.webserver
+  shell = "/bin/bash"
 }

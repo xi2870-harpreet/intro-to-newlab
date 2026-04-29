@@ -1,20 +1,21 @@
-# Define the lab metadata and structure
-resource "lab" "container_terminal" {
-
-  title       = "Container Terminal"
-  description = "This is an example lab with a single container sandbox and a terminal tab."
+resource "lab" "main" {
+  title       = "My Web Server Lab"
+  description = "Learn web server basics by customizing an nginx homepage"
   tags        = ["kubernetes", "advanced", "devops"]
 
   settings {
     theme = "modern-dark"
+
     timelimit {
       duration   = "180m"
       show_timer = true
     }
+
     idle {
       enabled = true
       timeout = "30m"
     }
+
     controls {
       show_stop = false
     }
@@ -23,6 +24,7 @@ resource "lab" "container_terminal" {
   layout = resource.layout.two_column
 
   content {
+
     chapter "introduction" {
       title = "Introduction"
 
@@ -31,10 +33,14 @@ resource "lab" "container_terminal" {
         reference = resource.page.first_challenge
       }
     }
+
+    chapter "getting_started" {
+      title = "Getting Started with Web Servers"
+
+      page "customize_homepage" {
+        reference = resource.page.customize_homepage
+      }
+    }
+
   }
 }
-
-# Define the exec resource at top level — runs your setup script in the container during initialization
-
-
-
